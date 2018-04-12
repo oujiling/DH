@@ -31,8 +31,8 @@ catepubid = re.findall('_pro_catepubid="(.*?)";', str(html))[0]
 cpbt = tree.xpath("//div[@class='hinfo clearfix']/h1")[0].text
 
 uploadUrl = "http://seller.dhgate.com/syi/edit.do?jsversion=20170710&cssversion=1523155457271&inp_catepubid=%s" % catepubid
-#browser.get(uploadUrl)
-browser.get("http://seller.dhgate.com/mydh/index.do")
+browser.get(uploadUrl)
+# browser.get("http://seller.dhgate.com/mydh/index.do")
 # cpbt_in = browser.find_element_by_xpath("//input[@id='productname']")
 # cpbt_in.send_keys('yenvine')
 browser.implicitly_wait(3)
